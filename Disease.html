@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disease</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: linear-gradient(to right, #FF5722, #FFC107);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: white;
+      opacity: 0;
+      animation: fadeInText 2s ease-out forwards;
+      margin-bottom: 30px;
+    }
+
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    form {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 350px;
+      opacity: 0;
+      animation: fadeInForm 2s ease-out forwards;
+    }
+
+    @keyframes fadeInForm {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    label {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="file"]:focus {
+      border-color: #3a8dff;
+      outline: none;
+    }
+
+    button {
+      background-color: #3a8dff;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #2a6db3;
+    }
+
+    button:active {
+      background-color: #1d5f91;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 600px) {
+      form {
+        width: 90%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Crop Disease Prediction</h1>
+
+  <form action="#">
+    <label for="img">Please Upload Image</label>
+    <input type="file" id="img" name="img" required>
+
+    <button type="submit">Predict</button>
+  </form>
+
+</body>
+</html>

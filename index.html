@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvestify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Kalnia+Glaze:wght@100..700&family=Merienda:wght@300..900&family=Rubik+Distressed&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+        }
+        h1 {
+            font-family: "Rubik Distressed", serif;
+                    }
+        h3 {
+            font-family: "Merienda", serif;
+            text-shadow: 2px 2px black;
+            color: violet;
+            opacity: 0;
+            animation: fadeIn 3s ease-out forwards;
+        }
+	a:hover{
+	background-color:pink;
+	 text-decoration: none;
+	border-radius:8px;
+	font-size:20px;
+	}
+        header {
+            background: black;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            animation: slideIn 1s ease-out;
+        }
+        nav {
+            text-align: center;
+            background: #444;
+            padding: 10px;
+            animation: fadeIn 3s ease-out forwards;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards;
+        }
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            flex: 1 1 calc(33.333% - 20px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .project img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 4s ease-out forwards;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .container img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+        }
+        .container .text {
+            max-width: 60%;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="">Home</a>
+    <a href="Crop.html">Crop</a>
+    <a href="Fertilizer.html">Fertilizers</a>
+    <a href="Disease.html">Disease</a>
+</nav>
+
+<header>
+    <h1>AGGROTECH</h1>
+    <p>Get informed Decisions About Your Farming Strategy</p>
+    <br>
+    <p>Here Are Some Questions We'll Answer</p>
+    <p>1. What crop to plant here?</p>
+    <p>2. What fertilizer to use?</p>
+    <p>3. Which disease do your crop have?</p>
+    <p>4. How to cure the disease?</p>
+</header>
+
+<div class="container">
+    <section id="about" class="section">
+        <img src="images/about-image.jpg" alt="Description of image" width="300">
+        <div class="text">
+            <h2>About Us</h2>
+            <h3>Improving Agriculture, Improving Lives, Cultivating Crops To Make Farmers Increase Profit.</h3>
+            <p>We use state-of-the-art machine learning and deep learning technologies to help you guide through the entire farming process. Make informed decisions to understand the demographics of your area, understand the factors that affect your crop, and keep them healthy for a super awesome successful yield.</p>
+        </div>
+    </section>
+</div>
+
+<section id="projects" class="section">
+    <h2>Our Services</h2>
+    <div class="projects">
+        <div class="project">
+            <img src="https://images.pexels.com/photos/1443867/pexels-photo-1443867.jpeg" alt="Crop Service" width="300">
+            <h3>Crop</h3>
+            <p>Recommendation about the type of crops to be cultivated which is best suited for the respective conditions.</p>
+        </div>
+        <div class="project">
+            <img src="https://media.istockphoto.com/id/606230424/photo/agriculture.jpg?s=612x612&w=0&k=20&c=byKybbMGCEAgdgfgyvUXC2ttl_8nbfc7JKpKFYg6rw4=" alt="Fertilizer Service" width="300">
+            <h3>Fertilizer</h3>
+            <p>Recommendation about the type of fertilizer best suited for the particular soil and the recommended crop.</p>
+        </div>
+        <div class="project">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-gvLdTKNEKSoEqtK8njK8hn3LM3C_0Y4Dsg&s" alt="Disease Service" width="300">
+            <h3>Crop Disease</h3>
+            <p>Predicting the name and causes of crop disease and suggestions to cure it.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h1>Agro</h1>
+    <p>An Environmental Intelligence StartUp</p>
+    <br>
+    <p>Made with ❤️ by Aravind</p>
+    <br>
+    <p>© Copyright 2025</p>
+</footer>
+</body>
+</html>

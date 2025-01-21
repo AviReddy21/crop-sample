@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fertilizer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: linear-gradient(to right, #4CAF50, #8BC34A);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: white;
+      opacity: 0;
+      animation: fadeInText 2s ease-out forwards;
+      margin-bottom: 30px;
+    }
+
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    form {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 350px;
+      opacity: 0;
+      animation: fadeInForm 2s ease-out forwards;
+    }
+
+    @keyframes fadeInForm {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    label {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input[type="number"], select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="number"]:focus, select:focus {
+      border-color: #3a8dff;
+      outline: none;
+    }
+
+    input[type="number"]::placeholder {
+      color: #aaa;
+    }
+
+    button {
+      background-color: #3a8dff;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2a6db3;
+    }
+
+    select {
+      background-color: #f9f9f9;
+      font-size: 14px;
+      color: #333;
+      padding: 12px;
+    }
+
+    select:hover {
+      background-color: #e6e6e6;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 600px) {
+      form {
+        width: 90%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Fertilizer Recommendations</h1>
+
+  <form action="">
+    <label for="Nitrogen">Nitrogen</label>
+    <input type="number" id="Nitrogen" placeholder="Enter the value" required>
+    
+    <label for="Phosphorous">Phosphorous</label>
+    <input type="number" id="Phosphorous" placeholder="Enter the value" required>
+    
+    <label for="Pottasium">Potassium</label>
+    <input type="number" id="Pottasium" placeholder="Enter the value" required>
+
+    <label for="crop">Crop you want to grow</label>
+
+    <label for="State">State</label>
+    <select id="state" name="crop" required>
+      <option value="">Select crop</option>
+      <option value="rice">Rice</option>
+      <option value="maize">Maize</option>
+      <option value="chickpea">Chickpea</option>
+      <option value="kidneybeans">Kidneybeans</option>
+      <option value="pigeonpeas">Pigeonpeas</option>
+      <option value="mothbeans">Mothbeans</option>
+      <option value="mungbean">Mungbean</option>
+      <option value="blackgram">Blackgram</option>
+      <option value="lentil">Lentil</option>
+      <option value="pomegranate">Pomegranate</option>
+      <option value="banana">Banana</option>
+      <option value="mango">Mango</option>
+      <option value="grapes">Grapes</option>
+      <option value="watermelon">Watermelon</option>
+      <option value="muskmelon">Muskmelon</option>
+      <option value="apple">Apple</option>
+      <option value="orange">Orange</option>
+      <option value="papaya">Papaya</option>
+      <option value="coconut">Coconut</option>
+      <option value="cotton">Cotton</option>
+      <option value="jute">Jute</option>
+      <option value="coffee">Coffee</option>
+    </select>
+
+    <br />
+    <button type="submit">Predict</button>
+  </form>
+
+</body>
+</html>
